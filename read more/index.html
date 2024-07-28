@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .myDIV {
+          float: right;
+          width: 33.3%;
+          padding: 50px;
+          color: blueviolet;
+          background-color: rgb(241, 178, 237);
+          margin-top: 20px;
+         margin-right: 100px;
+
+
+        }
+
+        #more-left {display: none;}
+        #more-right {display: none;}
+
+        button{
+            border: none;
+            background-color: rgb(157, 69, 240);
+            color: black;
+
+        }
+
+        </style>
+</head>
+<body>
+   
+
+
+   <section>
+    <div class="myDIV">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus reiciendis dolorem fugiat delectus <span id="dotsleft">...</span>
+    asperiores odio rem corrupti accusamus suscipit debitis explicabo quae libero voluptates veritatis, cumque 
+    expedita adipisci tempore natus!<span id="more-left">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni similique minima molestiae rem corporis
+     expedita voluptatibus non asperiores iure aspernatur voluptatem quos dolores, ea repellendus nobis sed optio modi dolor.</span>
+    <button onclick=" myFunctionleft()" id="myBtnleft" >Read more</button>
+    </div>
+    <div class="myDIV">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus reiciendis dolorem fugiat delectus <span id="dotsright">...</span>
+    asperiores odio rem corrupti accusamus suscipit debitis explicabo quae libero voluptates veritatis, cumque 
+    expedita adipisci tempore natus!<span id="more-right">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni similique minima molestiae rem corporis
+     expedita voluptatibus non asperiores iure aspernatur voluptatem quos dolores, ea repellendus nobis sed optio modi dolor.</span>
+    <button onclick=" myFunctionright()" id="myBtnright" >Read more</button>
+    </div>
+</section>
+
+           
+
+            <script>
+                function myFunctionleft() {
+                  var dotsleft = document.getElementById("dotsleft");
+                  var moreTextleft = document.getElementById("more-left");
+                  var btnTextleft = document.getElementById("myBtnleft");
+                
+                  if (dotsleft.style.display === "none") {
+                    dotsleft.style.display = "inline";
+                    btnTextleft.innerHTML = "Read more"; 
+                    moreTextleft.style.display = "none";
+                  } else {
+                    dotsleft.style.display = "none";
+                    btnTextleft.innerHTML = "Read less"; 
+                    moreTextleft.style.display = "inline";
+                  }
+                  
+                }
+                function myFunctionright() {
+                  var dotsright = document.getElementById("dotsright");
+                  var moreTextright = document.getElementById("more-right");
+                  var btnTextright = document.getElementById("myBtnright");
+                
+                  if (dotsright.style.display === "none") {
+                    dotsright.style.display = "inline";
+                    btnTextright.innerHTML = "Read more"; 
+                    moreTextright.style.display = "none";
+                  } else {
+                    dotsright.style.display = "none";
+                    btnTextright.innerHTML = "Read less"; 
+                    moreTextright.style.display = "inline";
+                  }
+                }
+               
+                </script>  
+
+
+</body>
+</html>
